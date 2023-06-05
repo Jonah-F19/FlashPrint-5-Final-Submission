@@ -1,0 +1,37 @@
+Intro
+Hello, My name is Jonah Figdor, and this explanation, I will show how my code works and what each python file does.
+This code that I created meant to be a malware/virus, that targets flashprint users(a 3d printing company). More specifically, this code will look through the victims pc to find any
+.gx files, the files used by the flash print software. From there it will modify them, to remove the infill, damaging the structural integrity, and it will also send the original 
+.gx file to me. This python code would than be changed to exe format, and it would make it self run, every time your computer starts, and also open the real flash print program to
+make it more undetectable to an unsespecting user. My intent for this project was to broaden my coding knowledge by working in the cyber security field.
+
+Files:
+
+appOpener.py 
+    This python file, is acttually the main file that is run by the user, not during PC startup. This file will open the Flash Print 5 application, and also run the main code.
+
+jonah_worm.py 
+    This file is the main code, this file will make a shortcut, if there isn't one already, in your startup folder and your desktop. The shortcut on your desktop will be from the
+    App opener, so that the app will open, but the one in your PC startup will actually be this code, so the app doesn't open and it is more discreet. This file will also look for
+    the .gx files on your pc. Run the gmailApi.py, which will email those files to me, and it would put the filename as the subject. Send those .gx files to run_me_jonah_trojans.py 
+    which will than corrupt those files. Finally, in the testing format, it will make a backup of those files, but for the real virus I removed that part.
+
+gmailApi.py
+    This python file is responsible for attatching the .gx file to the email and using Gmails Api system to email it to me
+
+run_me_jonah_trojans.py 
+    This file is responsible for the actuall disruption of the .gx file. This python code works by taking in a .gx file, and removing all of the gcode that is both only inbetween 
+    the "infill" comments, so it only removes the inside of the model, and to not remove any of the code in the first 10% or the last 10% of the y valuse, in order to not remove
+    the top/bottom. Finally, this code will add a "already trojaned" to the top of a file, to make sure it does not attempt to trojan that file again.
+
+All the other files are just for the winshell program, do not worry about them.
+
+BY THE WAY:
+This python code will not work after downloading, you will need to input your own credentials into the gmailApi.py file, specifically at line 17, to do that, follow this tutorial:
+https://www.thepythoncode.com/article/use-gmail-api-in-python. You do not need to put the code in, as I have already done that, all you need to do, is copy the line in the
+credentials.json folder and put it in line 17. From there, if you are also running this in python format, you should change the thisFileexe in jonah_worm.py to thisFilepy, just so
+the shortcut will be created properly, from there though, everything else should work. If you would like to convert it to exe and the instilation file, like the way I did, 
+I used the aut0-py-to-exe aplication and my instilation creator was just the iexpress in windows. 
+
+Also, look at the README under the video folder, I just forgot to mention one thing and I bring it up there.
+

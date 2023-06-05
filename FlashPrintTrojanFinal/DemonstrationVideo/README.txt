@@ -1,0 +1,1 @@
+Hello, just a quick note, in the video, many of the variables were local to my pc, in this code I fixed that. I just forgot to mention that in the video.
