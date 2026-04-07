@@ -1,0 +1,2 @@
+# 3D Printer Malware Example
+Hello, my Name is Jonah Figdor and I am a student at Emory University. For this project, I worked with NYU Professor Dr. Hammond Pearce to create a malware program that would work just like the FLASHPRINT 3D printing program. In the background, however, this program would scan your files for 3d printing files, steal them by sending them to my email, and then destroy the integrity of the builds by removing the supports. If you would like to see this program in action, please check out the demo video in the FlashPrintTrojanFinal folder.
